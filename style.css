@@ -1,0 +1,68 @@
+body {
+  background: white url(background.png);
+  background-size: cover;
+  mix-blend-mode: screen;
+  height: 100vh;
+}
+
+div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+h1 {
+  font-family: "Chee Bleed";
+  font-variation-settings: "temp" 1000;
+  -webkit-animation: variation 5s linear infinite alternate;
+  animation: variation 5s linear infinite alternate;
+  font-size: 20vw;
+  position: relative;
+  margin: 0;
+  opacity: 1;
+  color: transparent;
+  background-image: linear-gradient(30deg, rgba(223, 0, 0, 1) 2.7%, rgba(214, 91, 0, 1) 15.1%, rgba(233, 245, 0, 1) 29.5%, rgba(23, 255, 17, 1) 45.8%, rgba(29, 255, 255, 1) 55.5%, rgba(5, 17, 255, 1) 66.4%, rgba(202, 0, 253, 1) 70.4%);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+h1::before,
+h1::after {
+  content: attr(data-heading);
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+h1::before {
+  z-index: -1;
+  color: #d1d1d1;
+}
+
+h1::after {
+  z-index: -1;
+  text-shadow: 5px 5px 5px rgb(227, 227, 227);
+}
+
+@-webkit-keyframes variation {
+  0% {
+    font-variation-settings: "temp" 0;
+  }
+
+  100% {
+    font-variation-settings: "temp" 1000;
+  }
+}
+
+@keyframes variation {
+  0% {
+    font-variation-settings: "temp" 0;
+  }
+
+  100% {
+    font-variation-settings: "temp" 1000;
+  }
+}

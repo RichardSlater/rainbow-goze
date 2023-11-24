@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CodePen - Oooze / Slime Text</title>
+    <script src="script.js"></script>
+    <style>
+        @font-face {
+            font-family: "Chee Bleed";
+            src: url(chee_variable.woff2);
+        }
+    </style>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div>
+        <h1 data-heading=""><h1>
+    </div>
+    <script>
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const text = urlParams.get('text');
+        const tag = document.getElementsByTagName('h1')[0];
+        tag.innerText = text;
+        tag.setAttribute("data-heading", text);
+    </script>
+</body>
+
+</html>
